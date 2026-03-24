@@ -63,7 +63,7 @@ enum Economies
     IOTC, // 0.1.4
     LUMBERJACK, // 0.1.0
     WRBI, // 1200
-    ITI2, // 2.0
+    ITI2, // 2.14
     REAL, // Real Industries Beta
     AIRS__TRADE_AND_WAVES, // 1.3.0
     AIRS__PLAINS_TRAINS_AND_STEEL, // 1.3.0
@@ -297,9 +297,9 @@ function GetEconomyCargoList(economy, cargo_list) {
         if (30 < cargo_list.len() && cargo_list[30] == "WSTE")
             list.append("WSTE");
         return list;
-    case(Economies.ITI2): // Improved Town Industries 2
-        return ["PASS","COAL","WSTE","OIL_","WDPR","GOOD","RFPR","WOOD","IORE","STEL","PAPR",
-                "PLAS","FOOD","BDMT","VALU","LVST","WDCH","SCMT","SCPR","GRAI"];
+    case(Economies.ITI2): // Improved Town Industries 2.14
+        return ["PASS","COAL","MAIL","OIL_","WDPR","GOOD","RFPR","WOOD","IORE","STEL","PAPR",
+                "PLAS","FOOD","BDMT","VALU","LVST","WDCH","SCMT","SCPR","GRAI","WSTE"];
 
     case(Economies.REAL): // Real Industries Beta
         return ["PASS","COAL","GOOD","GRAI","IORE","MAIL","LVST","OIL_","STEL","VALU",
@@ -1055,7 +1055,7 @@ function DefineCargosBySettings(economy)
             ::CargoDecay <- [0.4,0.3,0.2,0.1];
             break;
         case(Economies.ITI2): // Improved Town Industries 2
-            ::CargoLimiter <- [0,2];
+            ::CargoLimiter <- [0,2,20];
             ::CargoCat <- [[0],
                        [12],
                        [13],
