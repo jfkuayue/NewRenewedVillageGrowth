@@ -65,6 +65,8 @@ enum Economies
     WRBI, // 1200
     ITI2, // 2.14
     REAL, // Real Industries Beta
+    AIRS__TRADE_AND_WAVES, // 1.3.0
+    AIRS__PLAINS_TRAINS_AND_STEEL, // 1.3.0
     MINIMALIST, // 1.1
     PIRS, // PIRS 2022
     END,
@@ -303,6 +305,18 @@ function GetEconomyCargoList(economy, cargo_list) {
         return ["PASS","COAL","GOOD","GRAI","IORE","MAIL","LVST","OIL_","STEL","VALU",
                 "WOOD","MAIZ","WDPR","WORK","STUD","OTI2","TRSH","VEHI","PRIS","FOOD",
                 "PASS","PETR","RUBR","PLAS","TYRE","HVEH"];
+                
+    case(Economies.AIRS__TRADE_AND_WAVES): // AIRS T&W 1.3.0
+        return ["PASS", "BDMT", "MAIL", "RFPR", "COAL", "GOOD", "COKE", "CMNT",
+                "ENSP", "IORE", "LIME", "FOOD", "WOOD", "OIL_", "FISH", "PETR",
+                "IRON", "QLME", "RCYC", "SCMT", "SLAG", "STEL", "GRVL", "WDPR",
+                "VEHI", "ALUM", "AORE"];
+
+    case(Economies.AIRS__PLAINS_TRAINS_AND_STEEL): // AIRS PT&S 1.3.0
+        return ["PASS", "ALUM", "MAIL", "NH3_", "AORE", "GOOD", "BDMT", "CMNT",
+                "RFPR", "COAL", "COKE", "FOOD", "ENSP", "FMSP", "FERT", "GRAI",
+                "IORE", "LIME", "WOOD", "OIL_", "PETR", "IRON", "POTA", "PHOS",
+                "QLME", "SLAG", "STEL", "STSE", "GRVL", "WDPR", "VEHI"];
 
     case(Economies.MINIMALIST): // Minimalist Industries
         return ["PASS", null,"MAIL", null, null,"GOOD"];
@@ -1065,6 +1079,29 @@ function DefineCargosBySettings(economy)
             ::CargoMinPopDemand <- [0,1000,2000,3000,4000];
             ::CargoPermille <- [60,45,35,15,15];
             ::CargoDecay <- [0.5,0.4,0.3,0.1,0.1];
+            break;
+        case(Economies.AIRS__TRADE_AND_WAVES):
+            ::CargoLimiter <- [0,2];
+            ::CargoCat <- [[0,2],
+                        [4,9,10,12,13,14,22,26],
+                        [3,6,8,16,17,18,19,20,21,23,25],
+                        [1,5,7,11,15,24]];
+            ::CargoCatList <- [CatLabels.PUBLIC_SERVICES, CatLabels.RAW_MATERIALS, CatLabels.PRODUCTS, CatLabels.FINAL_PRODUCTS]; 
+            ::CargoMinPopDemand <- [0,1000,2000,4000];
+            ::CargoPermille <- [60,25,15,10];
+            ::CargoDecay <- [0.4,0.2,0.1,0.1];
+            break;
+        case(Economies.AIRS__PLAINS_TRAINS_AND_STEEL):
+            ::CargoLimiter <- [0,2];
+            ::CargoCat <- [[0,2],
+                        [13,14,15,18,29],
+                        [4,9,16,17,19,22,23,28],
+                        [1,3,8,10,12,21,24,25,26,27],
+                        [5,6,7,11,20,30]];
+            ::CargoCatList <- [CatLabels.CATEGORY_I, CatLabels.CATEGORY_II, CatLabels.CATEGORY_III, CatLabels.CATEGORY_IV, CatLabels.CATEGORY_V];
+            ::CargoMinPopDemand <- [0,1000,2000,4000,8000];
+            ::CargoPermille <- [60,25,15,15,10];
+            ::CargoDecay <- [0.4,0.2,0.2,0.1,0.1];
             break;
         case(Economies.MINIMALIST): // Minimalist Industries 1.1
             ::CargoLimiter <- [0,2];

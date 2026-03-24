@@ -52,6 +52,7 @@ STR_SB_WELCOME_CARGO     :  当前选择的经济系统“{SILVER}{STRING}{B
 STR_SB_WELCOME_LIMIT_GROWTH         :{SILVER}  若未运输城镇的{CARGO_LIST}{ORANGE}则城镇发展将暂停{BLACK}。须运输至少 {SILVER}{NUM}%{BLACK} 的货物重启{ORANGE}城镇发展{BLACK}。{STRING}
 STR_SB_WELCOME_LIMIT_GROWTH_DELAY   :若此未满足此需求则将在 {SILVER}{NUM} 个月后暂停城镇发展。
 STR_SB_WELCOME_STATISTICS           :  为某城镇提供大部分货物的公司将成为该城镇的{ORANGE}贡献者{BLACK}。该城镇的最大人口之上的每个新人口将计入公司{ORANGE}贡献点{BLACK}。请参阅{ORANGE}目标清单{BLACK}中的贡献点和统计信息。
+STR_SB_PEAKS_AND_TROUGHS            :{SILVER}　　早晚高峰模式{BLACK}开启。客流量在{ORANGE}早晚高峰时极大{BLACK}，{ORANGE}凌晨时极小{BLACK}。目前客流模型为 {SILVER}{STRING}{BLACK}。更多信息请查看 https://www.tt-forums.net/viewtopic.php?t=87840。
 STR_SB_WELCOME_ETERNAL_LOVE         :{SILVER}  永恒之爱（Eternal Love）{BLACK}将更改公司的{ORANGE}城镇评级{BLACK}为{SILVER}{STRING}{BLACK}，每月一次。
 STR_SB_WELCOME_END                  :  游戏愉快！
 
@@ -151,6 +152,13 @@ STR_ECONOMY_ITI2                :ITI 改进城镇工业
 STR_ECONOMY_REAL                :Real Industries
 STR_ECONOMY_MINIMALIST          :Minimalist Industries
 STR_ECONOMY_PIRS                :Pikka's Industries Redux Set (PIRS 2022)
+
+##### PEAKS AND TROUGHS #####
+STR_PEAKS_AND_TROUGHS_HYPERPEAK     :Hyperpeak
+STR_PEAKS_AND_TROUGHS_EQUAL_PEAKS   :Equal Peaks
+STR_PEAKS_AND_TROUGHS_JAPAN         :Japan
+STR_PEAKS_AND_TROUGHS_UK            :UK
+STR_PEAKS_AND_TROUGHS_NO_PEAKS      :No Peaks
 
 ##### ETERNAL LOVE #####
 STR_ETERNAL_LOVE_OUTSTANDING    :完美

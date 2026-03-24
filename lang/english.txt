@@ -46,12 +46,13 @@ STR_SB_WARNING_1         :There are more towns on the map than the game script c
 STR_SB_WARNING_2         :The cargo list initialization has failed. It was caused by an unknown industry newGRF for which a procedural cargo list creation was not possible. {RED}The game script is turned off.{BLACK}
 STR_SB_WARNING_3         :The cargo list initialization has failed. It was caused by the industry randomization option for which the procedural industry categories could not be created. {RED}The game script is turned off.{BLACK}
 STR_SB_WARNING_4         :You must set parameter {ORANGE}Environment->Towns->Town growth speed{BLACK} to something other than None. {RED}The game script is turned off.{BLACK}
-STR_SB_WELCOME_TITLE     :Renewed Village Growth {NUM}.{NUM}
-STR_SB_WELCOME_DESC      :{SILVER}Renewed Village Growth (RVG){BLACK} is a game script which {ORANGE}changes the way towns grow{BLACK} in OpenTTD. Various cargo requirements are defined for each town that need to be - partially or completely - monthly satisfied to make the towns grow faster. More information can be found in the {ORANGE}Readme file{BLACK}.
+STR_SB_WELCOME_TITLE     :New Renewed Village Growth {NUM}.{NUM}
+STR_SB_WELCOME_DESC      :{SILVER}New Renewed Village Growth (NRVG){BLACK} is a game script which {ORANGE}changes the way towns grow{BLACK} in OpenTTD. Various cargo requirements are defined for each town that need to be - partially or completely - monthly satisfied to make the towns grow faster. More information can be found in the {ORANGE}Readme file{BLACK}.
 STR_SB_WELCOME_CARGO     :Economy {SILVER}{STRING}{BLACK} consists of {SILVER}{NUM} categories{BLACK}. To fulfill a category, deliver one or more of the category specific cargos to a {ORANGE}station near the town which accepts that cargo type{BLACK}. Fulfill the requirements above {SILVER}{NUM}%{BLACK} to {ORANGE}make the towns grow faster{BLACK}. More information about cargo categories are shown in the {ORANGE}Cargo categories story book page{BLACK}.
 STR_SB_WELCOME_LIMIT_GROWTH         :{SILVER}{CARGO_LIST}{BLACK} from that town can {ORANGE}stop the town growth{BLACK}. Transport at least {SILVER}{NUM}%{BLACK} of those cargo types to {ORANGE}allow town growth{BLACK}. {STRING1}
 STR_SB_WELCOME_LIMIT_GROWTH_DELAY   :The growth stops after {SILVER}{NUM} months{BLACK} of not fulfilling this requirement.
 STR_SB_WELCOME_STATISTICS           :Company providing the majority of cargo to a town becomes its {ORANGE}Contributor{BLACK}. Every new population above largest population of that town is counted towards {ORANGE}growth points{BLACK} of that company. See the growth points and statistics in the {ORANGE}Goal list{BLACK}.
+STR_SB_PEAKS_AND_TROUGHS            :{SILVER}Peaks and Troughs{BLACK} is ON. Passenger flow is {ORANGE}very high during morning and evening peaks{BLACK}, and {ORANGE}very low during late night{BLACK}. Current preset is {SILVER}{STRING}{BLACK}. Check https://www.tt-forums.net/viewtopic.php?t=87840 for more details.
 STR_SB_WELCOME_ETERNAL_LOVE         :{SILVER}Eternal Love{BLACK} changes {ORANGE}local authority rating{BLACK} of each town once per month to at least {SILVER}{STRING}{BLACK}.
 STR_SB_WELCOME_END                  :Have fun!
 
@@ -152,6 +153,13 @@ STR_ECONOMY_ITI2                :Improved Town Industries
 STR_ECONOMY_REAL                :Real Industries
 STR_ECONOMY_MINIMALIST          :Minimalist Industries
 STR_ECONOMY_PIRS                :Pikka's Industries Redux Set (PIRS 2022)
+
+##### PEAKS AND TROUGHS #####
+STR_PEAKS_AND_TROUGHS_HYPERPEAK     :Hyperpeak
+STR_PEAKS_AND_TROUGHS_EQUAL_PEAKS   :Equal Peaks
+STR_PEAKS_AND_TROUGHS_JAPAN         :Japan
+STR_PEAKS_AND_TROUGHS_UK            :UK
+STR_PEAKS_AND_TROUGHS_NO_PEAKS      :No Peaks
 
 ##### ETERNAL LOVE #####
 STR_ETERNAL_LOVE_OUTSTANDING    :outstanding

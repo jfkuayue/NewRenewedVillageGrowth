@@ -13,7 +13,7 @@ from pathlib import Path
 # ----------------------------------
 
 # Game Script name
-gs_name = "Renewed_Village_Growth"
+gs_name = "New_Renewed_Village_Growth"
 
 # ----------------------------------
 

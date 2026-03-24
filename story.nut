@@ -4,6 +4,7 @@ class StoryEditor
     eternal_love = null;
     limit_min_transport = null;
     limiter_delay = null;
+    peaks_and_troughs_preset = null;
 
     sp_cargo = null;
     sp_custom = null;
@@ -14,6 +15,7 @@ class StoryEditor
         this.eternal_love = GSController.GetSetting("eternal_love");
         this.limit_min_transport = GSController.GetSetting("limit_min_transport");
         this.limiter_delay = GSController.GetSetting("limiter_delay");
+        this.peaks_and_troughs_preset = GSController.GetSetting("preset");
     }
 }
 
@@ -24,11 +26,13 @@ function StoryEditor::CheckParameters(companies)
     local eternal_love = GSController.GetSetting("eternal_love");
     local limit_min_transport = GSController.GetSetting("limit_min_transport");
     local limiter_delay = GSController.GetSetting("limiter_delay");
+    local peaks_and_troughs_preset = GSController.GetSetting("preset");
 
     if (this.supply_impacting_part != supply_impacting_part
             || this.eternal_love != eternal_love
             || this.limit_min_transport != limit_min_transport
-            || this.limiter_delay != limiter_delay) {
+            || this.limiter_delay != limiter_delay
+            || this.peaks_and_troughs_preset != peaks_and_troughs_preset) {
 
         foreach (company in companies) {
             local sp_welcome_elements = GSStoryPageElementList(company.sp_welcome);
@@ -40,6 +44,7 @@ function StoryEditor::CheckParameters(companies)
             this.eternal_love = eternal_love;
             this.limit_min_transport = limit_min_transport;
             this.limiter_delay = limiter_delay;
+            this.peaks_and_troughs_preset = peaks_and_troughs_preset;
 
             this.WelcomePage(company.sp_welcome);
         }
@@ -66,6 +71,10 @@ function StoryEditor::WelcomePage(sp_welcome)
 
         local limiter_delay_text = this.limiter_delay > 0 ? GSText(GSText.STR_SB_WELCOME_LIMIT_GROWTH_DELAY, this.limiter_delay) : GSText(GSText.STR_STRING, GSText(GSText.STR_EMPTY));
         GSStoryPage.NewElement(sp_welcome, GSStoryPage.SPET_TEXT, 0, GSText(GSText.STR_SB_WELCOME_LIMIT_GROWTH, limiter_cargos, this.limit_min_transport, limiter_delay_text));
+    }
+
+    if (this.peaks_and_troughs_preset > 0) {
+        GSStoryPage.NewElement(sp_welcome, GSStoryPage.SPET_TEXT, 0, GSText(GSText.STR_SB_PEAKS_AND_TROUGHS, GSText(GSText.STR_PEAKS_AND_TROUGHS_HYPERPEAK + this.peaks_and_troughs_preset - 1)));
     }
 
     if (this.eternal_love > 0) {
